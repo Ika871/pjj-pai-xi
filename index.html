@@ -23,7 +23,7 @@ main{max-width:1080px;margin:-19px auto 0;position:relative;padding:0 20px 44px}
 <script src="config.js"></script><script>
 (function(){'use strict';
  var url=String(window.PJJ_CONFIG&&window.PJJ_CONFIG.appsScriptUrl||'').trim();
- var valid=/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec(?:\?.*)?$/.test(url);
+ var valid=/^https:\/\/script\.google\.com\/(?:a\/macros\/[A-Za-z0-9.-]+\/s|macros\/s)\/[A-Za-z0-9_-]+\/exec(?:\?.*)?$/.test(url);
  document.getElementById('setupMsg').hidden=valid;
  document.querySelectorAll('[data-target]').forEach(function(a){
   if(valid){a.href=url+'#'+a.getAttribute('data-target');a.rel='noopener noreferrer';}
